@@ -16,5 +16,5 @@ nexusArtifactUploader artifacts: [[artifactId: 'spring-boot-sample-war', classif
 }
 stage ('Deploy') {
 echo "tomcat"
-sh 'cd /tmp; wget http://52.15.81.192:8081/nexus/content/repositories/snapshots/org/springframework/boot/spring-boot-sample-war/1.4.0.BUILD-SNAPSHOT/spring-boot-sample-war-1.4.0.BUILD-20190221.013909-4.war';sudo cp -r spring-boot-sample-war-1.4.0.BUILD-20190221.013909-4.war /var/lib/tomcat/webapps/;'
+sh 'cd /tmp; wget http://52.15.81.192:8081/nexus/content/repositories/snapshots/org/springframework/boot/spring-boot-sample-war/1.4.0.BUILD-SNAPSHOT/spring-boot-sample-war-1.4.0.BUILD-20190221.013909-4.war'; sudo cp "spring-boot-sample-war-1.4.0.BUILD-20190221.013909-4.war" /var/lib/tomcat/webapps/;'
 }
